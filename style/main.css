@@ -1,0 +1,206 @@
+
+body {
+    font-family: var(--font-family);
+    font-weight: 400;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+}
+
+.visuallu-hidden {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    clip: rect(0 0 0 0);
+}
+
+/* Header */
+
+.header {
+    padding: 27px 0 42px;
+    border-bottom: 1px solid var(--grey-color);
+    background-color: var(--beige-color);
+
+}
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* z-index: var(--nav-index); */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow-y: auto;
+    padding: var(--container-offset);
+    /* width: 100%;
+    height: 100%; */
+    background-color: #fff;
+    opacity: 0;
+}
+
+.nav__list {
+
+}
+
+.nav__item {
+
+}
+
+.nav__link {
+
+}
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 20px;
+    z-index: var(--burger-index)
+}
+
+.burger::after,.burger::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-radius: 5px;
+    height: 2.5px;
+    background-color: var(--dark-color);
+    -webkit-transition: width var(--duration-medium),background-color var(--duration-medium),-webkit-transform var(--duration-medium);
+    transition: width var(--duration-medium),background-color var(--duration-medium),-webkit-transform var(--duration-medium);
+    transition: transform var(--duration-medium),width var(--duration-medium),background-color var(--duration-medium);
+    transition: transform var(--duration-medium),width var(--duration-medium),background-color var(--duration-medium),-webkit-transform var(--duration-medium);
+    will-change: transform
+}
+
+.burger::after {
+    top: 2px;
+    width: 100%
+}
+
+.burger::before {
+    bottom: 0;
+    width: 65%
+}
+
+.burger__line {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--dark-color);
+    opacity: 1;
+    -webkit-transform: translate(0,-50%,0);
+    -ms-transform: translate(0,-50%,0);
+    transform: translate(0,-50%,0);
+    -webkit-transition: opacity var(--duration-medium),background-color var(--duration-medium);
+    transition: opacity var(--duration-medium),background-color var(--duration-medium)
+}
+
+.burger:active {
+    opacity: .6
+}
+
+.burger:focus-visible {
+    outline: 0
+}
+
+.burger:focus-visible::after,.burger:focus-visible::before {
+    background-color: var(--accent-dark-color)
+}
+
+.burger:focus-visible .burger__line {
+    background-color: var(--accent-dark-color)
+}
+
+.burger:hover .burger__line, .burger:hover::after, .burger:hover::before {
+    background-color: var(--accent-color);
+}
+
+.logo {
+
+}
+
+.header__logo {
+
+}
+
+.header__socials {
+    display: flex;
+    align-items: center;
+}
+
+.socilas__item {
+    width: 24px;
+    height: 24px;
+}
+
+.socilas__item:not(:last-child) {
+    margin-right: 25px;
+}
+
+.socilas__item svg{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.socilas__item svg path {
+    transition: fill var(--duration-short) ease; 
+}
+.socilas__item:hover svg path {
+    fill: var(--accent-color);
+}
+
+.search {
+    position: relative;
+}
+
+.log-in {
+    position: relative;
+}
+
+.cart {
+    position: relative;
+}
+
+.cart__count {
+    position: absolute;
+    right: -5px;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    border-radius: 100%;
+    padding: 0 4.5px;
+    height: 14px;
+    font-size: 10px;
+    color: var(--dark-color);
+    background-color: var(--accent-color);
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOOD4ME</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,700;1,700&family=Work+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/reset.css"> 
+    <link rel="stylesheet" href="./style/mixins.css">
+    <link rel="stylesheet" href="./style/variables.css"> 
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body class="page__body page-loaded">
+    <section class="preloader preloader-none"></section>
+    <div class="site-container">
+        <header class="header">
+            <div class="container header__container">
+                <nav class="nav" title="Navigation" data-nav>
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-nav-item>Home</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-nav-item>Shop</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-nav-item>Faq’s</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-nav-item>Stockists</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-nav-item>Wholesale</a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__link" data-nav-item>Contact</a>
+                        </li> 
+                    </ul>
+                </nav>
+
+                <button class="burger" aria-label="Open menu" aria-expanded="false" data-burger>
+                    <span class="burger__line"></span>
+                </button>
+
+                <a class="logo header__logo" href="#">
+                    <img src="./images/logo.png" alt="Logo Good4Me" width="198" height="47">
+                </a>
+
+                <ul class="header__socials">
+                    <li class="socilas__item">
+                        <a href="#" class="socilas__link search" >
+                            <svg width="22" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21.731 20.435l-6.256-6.256a8.666 8.666 0 001.941-5.47C17.416 3.906 13.51 0 8.708 0 3.907 0 0 3.907 0 8.708c0 4.802 3.907 8.709 8.708 8.709 2.072 0 3.974-.73 5.47-1.942l6.257 6.256a.914.914 0 001.296 0 .916.916 0 000-1.296zM8.708 15.583a6.882 6.882 0 01-6.875-6.875 6.882 6.882 0 016.875-6.875 6.882 6.882 0 016.875 6.875 6.882 6.882 0 01-6.875 6.875z" fill="#454545"/></svg>
+                        </a>
+                    </li>
+                    <li class="socilas__item">
+                        <a href="#" class="socilas__link log-in" >
+                            <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#prefix__clip0_150_175)"><path d="M20.485 15.515a11.954 11.954 0 00-4.56-2.86 6.935 6.935 0 003.012-5.717A6.945 6.945 0 0012 0a6.945 6.945 0 00-6.938 6.938 6.935 6.935 0 003.013 5.717 11.954 11.954 0 00-4.56 2.86A11.922 11.922 0 000 24h1.875c0-5.583 4.542-10.125 10.125-10.125S22.125 18.417 22.125 24H24c0-3.205-1.248-6.219-3.515-8.485zM12 12a5.068 5.068 0 01-5.063-5.063A5.068 5.068 0 0112 1.875a5.068 5.068 0 015.063 5.063A5.068 5.068 0 0112 12z" fill="#454545"/></g><defs><clipPath id="prefix__clip0_150_175"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                        </a>
+                    </li>
+                    <li class="socilas__item">
+                        <a href="#" class="socilas__link cart" >
+                            <svg width="18" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.11 6.644h-.883V5.368A5.375 5.375 0 008.858 0 5.375 5.375 0 003.49 5.369v1.275h-.884A2.609 2.609 0 000 9.249v12.145A2.609 2.609 0 002.606 24H15.11a2.609 2.609 0 002.605-2.606V9.25a2.609 2.609 0 00-2.605-2.605zM5.19 5.368A3.673 3.673 0 018.858 1.7a3.673 3.673 0 013.669 3.668v1.276H5.19V5.368zm10.827 16.026c0 .5-.407.906-.906.906H2.606a.907.907 0 01-.906-.906V9.25c0-.5.406-.905.906-.905h.883v1.192a1.29 1.29 0 00-.449.975 1.3 1.3 0 102.599 0c0-.39-.176-.737-.45-.975V8.344h7.338v1.192a1.29 1.29 0 00-.45.975 1.3 1.3 0 102.6 0c0-.39-.177-.737-.45-.975V8.344h.884c.5 0 .905.406.905.905v12.145z" fill="#454545"/></svg>
+                            <div class="cart__count">0</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </header>
+        <main class="main">
+            <section class="hero">
+                <div class="container hero__container">
+                    
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+    
+            </div>
+        </footer>
+        <script src="./js/main.js"></script>
+    </div>  
+</body>
+</html>
