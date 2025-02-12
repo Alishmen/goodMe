@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color">
     <title>GOOD4ME</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,700;1,700&family=Work+Sans:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./style/reset.css"> 
     <link rel="stylesheet" href="./style/mixins.css">
     <link rel="stylesheet" href="./style/variables.css"> 
@@ -85,7 +88,6 @@
                     </div>
                     <div class="hero__img">
                         <picture>
-                            <!-- <source srcset="./images/hero-img.webp" type="image/webp"> -->
                             <img src="./images/hero-img.png" alt="Multivitamins" width="1151" height="483">
                         </picture>
                     </div>
@@ -103,12 +105,10 @@
                     <ul class="benefits__list">
                         <li class="benefits__item">
                             <div class="benefits__icon">
-                                <svg>
-                                    <use xlink:href="./images/sprite.svg#quality-icon"></use>                             
-                                </svg>
+                                <img src="./icon/quality-icon.svg" alt="quality">
                             </div>
                             <h3 class="benefits__subtitle">
-
+                                Quality Assured
                             </h3>
                             <p class="benefits__descr">
                                 Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
@@ -116,12 +116,10 @@
                         </li>
                         <li class="benefits__item">
                             <div class="benefits__icon">
-                                <svg>
-                                    <use xlink:href="./images/sprite.svg#chemical-icon"></use>                             
-                                </svg>
+                                <img src="./icon/ingredients-icon.svg" alt="ingredients">
                             </div>
                             <h3 class="benefits__subtitle">
-
+                                Clean Ingredients
                             </h3>
                             <p class="benefits__descr">
                                 Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
@@ -129,12 +127,10 @@
                         </li>
                         <li class="benefits__item">
                             <div class="benefits__icon">
-                                <svg>
-                                    <use xlink:href="./images/sprite.svg#ingredients-icon"></use>                             
-                                </svg>
+                                <img src="./icon/chemical-icon.svg" alt="Chemical">
                             </div>
                             <h3 class="benefits__subtitle">
-
+                                Chemical Free
                             </h3>
                             <p class="benefits__descr">
                                 Lorem Ipsum is&nbsp;simply dummy text of&nbsp;the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
@@ -143,13 +139,96 @@
                     </ul>
                 </div>
             </section>
+            <section class="facts">
+                <div class="container facts__container">
+                    <div class="facts__row">
+                        <ul class="facts__list">
+                            <li class="facts__item">
+                                <h3 class="facts__item-title">It is a long established fact that a reader</h3>
+                                <p class="facts__item-descr">It is a long established fact that 
+                                    a reader will be distracted 
+                                    by the...</p>
+                            </li>
+                            <li class="facts__item">
+                                <h3 class="facts__item-title">This a long established fact that.</h3>
+                                <p class="facts__item-descr">It is a long established fact that 
+                                    a reader will be distracted 
+                                    by the...</p>
+                            </li>
+                            <li class="facts__item">
+                                <h3 class="facts__item-title">We a long established fact that as.</h3>
+                                <p class="facts__item-descr">It is a long established fact that 
+                                    a reader will be distracted 
+                                    by the...</p>
+                            </li>
+                            <li class="facts__item">
+                                <h3 class="facts__item-title">This a long established fact that long.</h3>
+                                <p class="facts__item-descr">It is a long established fact that 
+                                    a reader will be distracted 
+                                    by the...</p>
+                            </li>
+                        </ul>
+                        <div class="facts__col">
+                            <h2 class="title facts__title">TAKE CONTROL OF YOUR HEALTH</h2>
+                            <div class="facts__wrapper">
+                                <div class="facts__img">
+                                    <img src="./images/picture-product-fact.jpg" alt="Customer with product" width="509" height="643">
+                                </div>
+                                <div class="facts__content">
+                                    <div class="facts__descr">
+                                        <p>The Good4Me range has been formulated based on scientific. Our vitamins are here and ready to boost your mood, immunity and overall well-being!
+                                        </p>
+                                        <p>Our vitamins are here and ready to boost your mood. New Zealand from local and imported ingredients.
+                                        </p>
+                                    </div>
+                                    <a class="btn facts__btn btn--secondary" href="#">BROWSE OUR RANGE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="container about__container">
+                    <div class="about__content">
+                        <h2 class="title about__title">
+                            OUR PRODUCTS ARE
+                            <span>Game-changing vitamins</span>
+                        </h2>
+                        <p class="about__descr">
+                            Low in sugar (sweetened with a fruit base) Free from gluten, gelatine, dairy,  egg,nutsor soy Free from artificial flavours or colours Vegan friendly It is a long established fact that a reader will be distracted by the Free from artificial flavours or colours Vegan friendly It is a long established fact that a reader will be distracted by the...
+                        </p>
+                        <h3 class="about__subtitle">COMPLETE YOUR ROUTINE</h3>
+                        <div class="about__swiper-inner">
+                            <div #swiperRef="" class="swiper-container mySwiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./images/full-product.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">Slide 2</div>
+                                    <div class="swiper-slide">Slide 3</div>
+                                    <div class="swiper-slide">Slide 4</div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="about__inner">
+                        <div class="about__img">
+                            <img src="./images/about-image.png" alt="Women with vitamins" width="707" height="875">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer">
             <div class="container">
     
             </div>
         </footer>
-        <script src="./js/main.js"></script>
     </div>  
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
