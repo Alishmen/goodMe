@@ -13,7 +13,7 @@
     --accent-color: #f6623e;
     --accent-dark-color: #c74f31;
     --beige-color: #fff8f6;
-    --beige-dark-color:: #fef0e7;
+    --beige-dark-color: #fef0e7;
     --duration-short: 0.3s;
     --duration-medium: 0.4s;
     --duration-long: 0.5s;
@@ -23,4 +23,5 @@
     --gap: 30px;
     --nav-index: 10;
     --burger-index: 11;
+    --size: 10px;
 }
